@@ -435,6 +435,9 @@ es:
         user:
           one: Usuario
           other: Usuarios
+        postulant:
+          one: Postulante
+          other: Postulantes
       attributes:
         user:
           email: Email

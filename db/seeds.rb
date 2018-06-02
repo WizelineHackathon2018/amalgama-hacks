@@ -26,3 +26,7 @@ if Rails.env.development?
 		admin_user.add_role :admin
 	end
 end
+
+
+
+
