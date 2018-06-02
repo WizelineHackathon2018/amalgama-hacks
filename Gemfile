@@ -86,6 +86,7 @@ gem 'rubycritic', require: false
 gem 'web-console', '>= 3.3.0'
 
 gem 'mysql2', '~> 0.3.18'
+gem 'better_errors' # url: https://github.com/charliesome/better_errors
 
 # Use Capistrano for deployment
 group :development do
@@ -106,7 +107,6 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 
-  gem 'better_errors' # url: https://github.com/charliesome/better_errors
   gem 'binding_of_caller'
 end
 
