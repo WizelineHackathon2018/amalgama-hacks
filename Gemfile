@@ -83,7 +83,8 @@ gem 'paperclip', '~> 5.0.0' # url: https://github.com/thoughtbot/paperclip
 
 gem 'rubocop', require: false
 gem 'rubycritic', require: false
-gem 'web-console', '>= 3.3.0'
+
+gem 'mysql2', '~> 0.3.18'
 
 # Use Capistrano for deployment
 group :development do
@@ -93,6 +94,8 @@ group :development do
   gem 'capistrano-rvm',     require: false
   gem 'capistrano3-puma',   require: false
   gem 'capistrano-sidekiq', github: 'seuros/capistrano-sidekiq'
+
+  gem 'web-console', '>= 3.3.0'
 end
 
 group :development do
