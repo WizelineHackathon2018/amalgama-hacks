@@ -1,0 +1,459 @@
+es:
+  activerecord:
+    errors:
+      messages:
+        record_invalid: "La validación falló: %{errors}"
+        restrict_dependent_destroy:
+          has_one: No se puede eliminar el registro porque existe un %{record} dependiente
+          has_many: No se puede eliminar el registro porque existen %{record} dependientes
+      models:
+        doorkeeper/application:
+          attributes:
+            redirect_uri:
+              fragment_present: 'no puede contener un fragmento.'
+              invalid_uri: 'debe ser una URI válida.'
+              relative_uri: 'debe ser una URI absoluta.'
+              secured_uri: 'debe ser una URI HTTPS/SSL.'
+    attributes:
+      doorkeeper/application:
+        name: 'Nombre'
+        redirect_uri: 'URI de redirección'
+        scopes: ~
+  doorkeeper:
+    applications:
+      confirmations:
+        destroy: '¿Estás seguro?'
+      buttons:
+        edit: 'Editar'
+        destroy: 'Eliminar'
+        submit: 'Enviar'
+        cancel: 'Cancelar'
+        authorize: 'Autorizar'
+      form:
+        error: 'Ups! Verifica tu formulario por posibles errores'
+      help:
+        redirect_uri: 'Usa una linea por URI'
+        native_redirect_uri: 'Usa %{native_redirect_uri} para test locales'
+        scopes: ~
+      edit:
+        title: 'Editar aplicación'
+      index:
+        title: 'Tus aplicaciones'
+        new: 'Nueva aplicación'
+        name: 'Nombre'
+        callback_url: 'Callback URL'
+      new:
+        title: 'Nueva aplicación'
+      show:
+        title: 'Aplicación: %{name}'
+        application_id: 'Identificador de aplicación'
+        secret: 'Secret'
+        scopes: ~
+        callback_urls: 'Callback urls'
+        actions: 'Acciones'
+
+    authorizations:
+      buttons:
+        authorize: 'Autorizar'
+        deny: 'Denegar'
+      error:
+        title: 'Ha ocurrido un error'
+      new:
+        title: 'Autorización requerida'
+        prompt: '¿Autorizas a %{client_name} para usar tu cuenta?'
+        able_to: 'Está aplicación tendrá permisos para'
+      show:
+        title: 'Código de autorización'
+
+    authorized_applications:
+      confirmations:
+        revoke: '¿Estás seguro?'
+      buttons:
+        revoke: 'Revocar'
+      index:
+        title: 'Tus aplicaciones autorizadas'
+        application: 'Aplicación'
+        created_at: 'Creada el'
+        date_format: '%d/%m/%Y %H:%M:%S'
+
+    errors:
+      messages:
+        # Common error messages
+        invalid_request: 'La petición no tiene un parámetro obligatorio, incluye un valor de parámetro incompatible, o tiene un formato incorrecto.'
+        invalid_redirect_uri: 'La uri de redirección no es valida.'
+        unauthorized_client: 'El cliente no tiene autorización para realizar esta petición utilizando este método.'
+        access_denied: 'El propietario del recurso o el servidor de autorización han denegado la petición.'
+        invalid_scope: 'El scope solicitado no es válido, es desconocido, o tiene un formato incorrecto.'
+        server_error: 'El servidor de autorización ha encontrado una condición inesperada que le ha impedido completar la petición.'
+        temporarily_unavailable: 'El servidor de autorización no ha podido manejar la petición por una sobrecarga temporal o por mantenimiento del servidor.'
+
+        #configuration error messages
+        credential_flow_not_configured: 'El flujo de credenciales del propietario del recurso ha fallado porque Doorkeeper.configure.resource_owner_from_credentials no está configurado.'
+        resource_owner_authenticator_not_configured: 'La búsqueda del propietario del recurso ha fallado porque Doorkeeper.configure.resource_owner_authenticator no está configurado.'
+
+        # Access grant errors
+        unsupported_response_type: 'El servidor de autorización no soporta este tipo de respuesta.'
+
+        # Access token errors
+        invalid_client: 'La autenticación del cliente ha fallado por cliente desconocido, cliente no autenticado, o método de autenticación incompatible.'
+        invalid_grant: 'La autorización proporcionada no es válida, ha expirado, se ha revocado, no coincide con la URI de redirección utilizada en la petición de autorización, o ha sido solicitada por otro cliente.'
+        unsupported_grant_type: 'El tipo de autorización no está soportada por el servidor de autorización.'
+
+        # Password Access token errors
+        invalid_resource_owner: 'Las credenciales del propietario del recurso proporcionado no son válidas, o el propietario del recurso no ha sido encontrado'
+
+        invalid_token:
+          revoked: "El token de acceso ha sido revocado"
+          expired: "El token de acceso ha expirado"
+          unknown: "El token de acceso es inválido"
+
+    flash:
+      applications:
+        create:
+          notice: 'Aplicación creada.'
+        destroy:
+          notice: 'Aplicación eliminada.'
+        update:
+          notice: 'Aplicación actualizada.'
+      authorized_applications:
+        destroy:
+          notice: 'Aplicación revocada.'
+
+    layouts:
+      admin:
+        nav:
+          oauth2_provider: 'Proveedor OAuth2'
+          applications: 'Aplicaciones'
+          home: 'Home'
+      application:
+        title: 'Autorización OAuth requerida'
+  date:
+    abbr_day_names:
+    - dom
+    - lun
+    - mar
+    - mié
+    - jue
+    - vie
+    - sáb
+    abbr_month_names:
+    -
+    - ene
+    - feb
+    - mar
+    - abr
+    - may
+    - jun
+    - jul
+    - ago
+    - sep
+    - oct
+    - nov
+    - dic
+    day_names:
+    - domingo
+    - lunes
+    - martes
+    - miércoles
+    - jueves
+    - viernes
+    - sábado
+    formats:
+      default: "%d/%m/%Y"
+      long: "%d de %B de %Y"
+      short: "%d de %b"
+    month_names:
+    -
+    - Enero
+    - Febrero
+    - Marzo
+    - Abril
+    - Mayo
+    - Junio
+    - Julio
+    - Agosto
+    - Septiembre
+    - Octubre
+    - Noviembre
+    - Diciembre
+    order:
+    - :day
+    - :month
+    - :year
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        one: alrededor de 1 hora
+        other: alrededor de %{count} horas
+      about_x_months:
+        one: alrededor de 1 mes
+        other: alrededor de %{count} meses
+      about_x_years:
+        one: alrededor de 1 año
+        other: alrededor de %{count} años
+      almost_x_years:
+        one: casi 1 año
+        other: casi %{count} años
+      half_a_minute: medio minuto
+      less_than_x_minutes:
+        one: menos de 1 minuto
+        other: menos de %{count} minutos
+      less_than_x_seconds:
+        one: menos de 1 segundo
+        other: menos de %{count} segundos
+      over_x_years:
+        one: más de 1 año
+        other: más de %{count} años
+      x_days:
+        one: 1 día
+        other: "%{count} días"
+      x_minutes:
+        one: 1 minuto
+        other: "%{count} minutos"
+      x_months:
+        one: 1 mes
+        other: "%{count} meses"
+      x_seconds:
+        one: 1 segundo
+        other: "%{count} segundos"
+    prompts:
+      day: Día
+      hour: Hora
+      minute: Minutos
+      month: Mes
+      second: Segundos
+      year: Año
+  errors:
+    format: "%{attribute} %{message}"
+    messages:
+      accepted: debe ser aceptado
+      blank: no puede estar en blanco
+      present: debe estar en blanco
+      confirmation: no coincide
+      empty: no puede estar vacío
+      equal_to: debe ser igual a %{count}
+      even: debe ser par
+      exclusion: está reservado
+      greater_than: debe ser mayor o igual a %{count}
+      greater_than_or_equal_to: debe ser mayor o igual a %{count}
+      inclusion: no está incluido en la lista
+      invalid: no es válido
+      less_than: debe ser menor que %{count}
+      less_than_or_equal_to: 'limite: %{count} mts, para envíos con medidas mayores comuníquese a hola@atenelogistic.com'
+      model_invalid: "La validación falló: %{errors}"
+      not_a_number:  debe ser un número
+      not_an_integer: debe ser un entero
+      odd: debe ser impar
+      required: debe existir
+      taken: ya está en uso
+      too_long:
+        one: "es demasiado largo (1 carácter máximo)"
+        other: "es demasiado largo (%{count} caracteres máximo)"
+      too_short:
+        one: "es demasiado corto (1 carácter mínimo)"
+        other: "es demasiado corto (%{count} caracteres mínimo)"
+      wrong_length:
+        one: "no tiene la longitud correcta (1 carácter exactos)"
+        other: "no tiene la longitud correcta (%{count} caracteres exactos)"
+      other_than: debe ser distinto de %{count}
+    template:
+      body: 'Se encontraron problemas con los siguientes campos:'
+      header:
+        one: No se pudo guardar este/a %{model} porque se encontró 1 error
+        other: No se pudo guardar este/a %{model} porque se encontraron %{count} errores
+  helpers:
+    select:
+      prompt: Por favor seleccione
+    submit:
+      create: Crear %{model}
+      submit: Guardar %{model}
+      update: Actualizar %{model}
+  devise:
+    confirmations:
+      confirmed: Tu cuenta ha sido confirmada satisfactoriamente.
+      new:
+        resend_confirmation_instructions: Reenviar instrucciones de confirmación
+      send_instructions: Vas a recibir un correo con instrucciones sobre cómo confirmar tu cuenta en unos minutos.
+      send_paranoid_instructions: Si tu correo existe en nuestra base de datos, en unos minutos recibirás un correo con instrucciones sobre cómo confirmar tu cuenta.
+    failure:
+      already_authenticated: Ya has iniciado sesión.
+      inactive: Tu cuenta aún no ha sido activada.
+      invalid: Email o contraseña no válidos.
+      last_attempt: Tienes un intento más antes de que tu cuenta sea bloqueada.
+      locked: Tu cuenta está bloqueada.
+      not_found_in_database: Email o contraseña no válidos.
+      timeout: Tu sesión expiró. Por favor, inicia sesión nuevamente para continuar.
+      unauthenticated: Tienes que iniciar sesión o registrarte para poder continuar.
+      unconfirmed: Tienes que confirmar tu cuenta para poder continuar.
+    mailer:
+      confirmation_instructions:
+        action: Confirmar mi cuenta
+        greeting: "¡Bienvenido %{recipient}!"
+        instruction: 'Usted puede confirmar el correo electrónico de su cuenta a través de este enlace:'
+        subject: Instrucciones de confirmación
+      password_change:
+        greeting:
+        message:
+        subject: Contraseña cambiada
+      reset_password_instructions:
+        action: Cambiar mi contraseña
+        greeting: "¡Hola %{recipient}!"
+        instruction: Alguien ha solicitado un enlace para cambiar su contraseña, lo que se puede realizar a través del siguiente enlace.
+        instruction_2: Si usted no lo ha solicitado, por favor ignore este correo electrónico.
+        instruction_3: Su contraseña no será cambiada hasta que usted acceda el enlace y cree uno nuevo.
+        subject: Instrucciones de recuperación de contraseña
+      unlock_instructions:
+        action: Desbloquear mi cuenta
+        greeting: "¡Hola %{recipient}!"
+        instruction: 'Haga click en el siguiente enlace para desbloquear su cuenta:'
+        message: Su cuenta ha sido bloqueada debido a una cantidad excesiva de intentos infructuosos para ingresar.
+        subject: Instrucciones para desbloquear
+    omniauth_callbacks:
+      failure: No has sido autorizado en la cuenta %{kind} porque "%{reason}".
+      success: Has sido autorizado satisfactoriamente en la cuenta %{kind}.
+    passwords:
+      edit:
+        change_my_password: Cambiar mi contraseña
+        change_your_password: Cambie su contraseña
+        confirm_new_password: Confirme la nueva contraseña
+        new_password: Nueva contraseña
+      new:
+        forgot_your_password: "¿Ha olvidado su contraseña?"
+        send_me_reset_password_instructions: Envíeme las instrucciones para resetear mi contraseña
+      no_token: No puedes acceder a esta página si no es a través de un enlace para resetear tu contraseña. Si has llegado hasta aquí desde el email para resetear tu contraseña, por favor asegúrate de que la URL introducida está completa.
+      send_instructions: Recibirás un correo con instrucciones sobre cómo resetear tu contraseña en unos pocos minutos.
+      send_paranoid_instructions: Si tu correo existe en nuestra base de datos, recibirás un correo con instrucciones sobre cómo resetear tu contraseña en tu bandeja de entrada.
+      updated: Se ha cambiado tu contraseña. Ya iniciaste sesión.
+      updated_not_active: Tu contraseña fue cambiada.
+    registrations:
+      destroyed: Fue grato tenerte con nosotros. Tu cuenta fue cancelada.
+      edit:
+        are_you_sure: "¿Está usted seguro?"
+        cancel_my_account: Anular mi cuenta
+        currently_waiting_confirmation_for_email: 'Actualmente esperando la confirmacion de: %{email} '
+        leave_blank_if_you_don_t_want_to_change_it: dejar en blanco si no desea cambiarlo
+        title: Editar %{resource}
+        unhappy: Infeliz
+        update: Actualizar
+        we_need_your_current_password_to_confirm_your_changes: necesitamos su contraseña actual para confirmar los cambios
+      new:
+        sign_up: Registrarse
+      signed_up: Bienvenido. Tu cuenta fue creada.
+      signed_up_but_inactive: Tu cuenta ha sido creada correctamente. Sin embargo, no hemos podido iniciar la sesión porque tu cuenta aún no está activada.
+      signed_up_but_locked: Tu cuenta ha sido creada correctamente. Sin embargo, no hemos podido iniciar la sesión porque que tu cuenta está bloqueada.
+      signed_up_but_unconfirmed: Se ha enviado un mensaje con un enlace de confirmación a tu correo electrónico. Abre el enlace para activar tu cuenta.
+      update_needs_confirmation: Has actualizado tu cuenta correctamente, pero es necesario confirmar tu nuevo correo electrónico. Por favor, comprueba tu correo y sigue el enlace de confirmación para finalizar la comprobación del nuevo correo eletrónico.
+      updated: Tu cuenta se ha actualizada.
+    sessions:
+      already_signed_out: Sesión finalizada.
+      new:
+        sign_in: Iniciar sesión
+      signed_in: Sesión iniciada.
+      signed_out: Sesión finalizada.
+    shared:
+      links:
+        back: Atrás
+        didn_t_receive_confirmation_instructions: "¿No ha recibido las instrucciones de confirmación?"
+        didn_t_receive_unlock_instructions: "¿No ha recibido instrucciones para desbloquear?"
+        forgot_your_password: "¿Ha olvidado su contraseña?"
+        sign_in: Iniciar sesión
+        sign_in_with_provider: Iniciar sesión con %{provider}
+        sign_up: Registrarse
+    unlocks:
+      new:
+        resend_unlock_instructions: Reenviar instrucciones para desbloquear
+      send_instructions: Vas a recibir instrucciones para desbloquear tu cuenta en unos pocos minutos.
+      send_paranoid_instructions: Si tu cuenta existe, vas a recibir instrucciones para desbloquear tu cuenta en unos pocos minutos.
+      unlocked: Tu cuenta ha sido desbloqueada. Ya puedes iniciar sesión.
+  number:
+    currency:
+      format:
+        delimiter: "."
+        format: "%n %u"
+        precision: 2
+        separator: ","
+        significant: false
+        strip_insignificant_zeros: false
+        unit: "€"
+    format:
+      delimiter: "."
+      precision: 3
+      separator: ","
+      significant: false
+      strip_insignificant_zeros: false
+    human:
+      decimal_units:
+        format: "%n %u"
+        units:
+          billion: mil millones
+          million:
+            one: millón
+            other: millones
+          quadrillion: mil billones
+          thousand: mil
+          trillion:
+            one: billón
+            other: billones
+          unit: ''
+      format:
+        delimiter: ''
+        precision: 1
+        significant: true
+        strip_insignificant_zeros: true
+      storage_units:
+        format: "%n %u"
+        units:
+          byte:
+            one: Byte
+            other: Bytes
+          gb: GB
+          kb: KB
+          mb: MB
+          tb: TB
+    percentage:
+      format:
+        delimiter: ''
+        format: "%n %"
+    precision:
+      format:
+        delimiter: ''
+  support:
+    array:
+      last_word_connector: " y "
+      two_words_connector: " y "
+      words_connector: ", "
+  time:
+    formats:
+      default: "%d/%m/%Y"
+      short: "%d/%m"
+      long: "%d/%m/%Y"
+  activerecord:
+      models:
+        admin_user:
+          one: Administrador
+          other: Administradores
+        user:
+          one: Usuario
+          other: Usuarios
+      attributes:
+        user:
+          email: Email
+          password: Contraseña
+          current_sign_in_at: Última vez conectado
+          last_sign_in_at: Última vez conectado
+          password_confirmation: Repetir contraseña
+          sign_in_count: Cantidad de inicios de sesión
+          created_at: Creado el
+          first_name: Nombre
+          last_name: Apellido
+          phone: Teléfono
+          avatar: Foto
+          document_number: DNI
+  active_admin:
+    back: Volver
+    page_views:
+      admin_users: Administradores
+      users: Usuarios
+    form_title:
+      admin_user: Detalle Administrador
+      user: Detalle Usuario

@@ -1,0 +1,78 @@
+require: rubocop-rspec
+
+Rails:
+   Enabled: true
+
+AllCops:
+  DisplayCopNames: true
+  DisplayStyleGuide: true
+  ExtraDetails: true
+  DefaultFormatter: html
+  Exclude:
+     - db/**/*.rb
+     - vendor/**/*.rb
+     - tmp/**/*.rb
+
+Metrics/LineLength:
+  Enabled: true
+  Max: 100
+
+Layout/Tab:
+  Enabled: false
+
+Layout/AlignHash:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+MultilineMethodCallIndentation:
+  Enabled: false
+
+Layout/IndentationWidth:
+  Enabled: false
+
+Layout/FirstParameterIndentation:
+  Enabled: false
+
+Layout/IndentArray:
+  Enabled: false
+
+Layout/AlignParameters:
+  Enabled: false
+
+Layout/IndentHash:
+  Enabled: false
+
+Layout/AccessModifierIndentation:
+  Enabled: false
+
+Layout/SpaceInsideBrackets:
+  Enabled: false
+
+Layout/SpaceInsideParens:
+  Enabled: false
+
+Layout/SpaceInsideRangeLiteral:
+  Enabled: false
+
+Layout/SpaceAroundBlockParameters:
+  Enabled: false
+
+Layout/SpaceInsidePercentLiteralDelimiters:
+   Enabled: false
+
+Layout/CaseIndentation:
+  Enabled: false
+
+Style/AutoResourceCleanup:
+  Enabled: true
+
+Style/LambdaCall:
+  Enabled: false
+
+RSpec/ExampleWording:
+  Enabled: false
+
+Style/Documentation:
+   Enabled: false

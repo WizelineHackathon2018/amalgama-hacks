@@ -1,0 +1,28 @@
+image: ruby:2.5.1
+
+services:
+  - postgres:latest
+
+variables:
+  RAILS_ENV: "test"
+  COVERAGE: "true"
+  POSTGRES_HOST: "postgres"
+  POSTGRES_PASSWORD: "password"
+
+before_script:
+  - cp config/database.yml.example config/database.yml
+  - cp config/secrets.yml.example config/secrets.yml
+  - cp config/settings/example.yml config/settings/test.yml
+  - mkdir -p reports/
+  - bundle install --jobs 4 --deployment
+
+test:
+  script:
+    - bundle exec rake db:drop db:create db:migrate
+    - bundle exec rake app:reports
+  tags:
+    - docker
+  coverage: '/\(\d+.\d+\%\) covered/'
+  artifacts:
+    paths:
+      - reports/

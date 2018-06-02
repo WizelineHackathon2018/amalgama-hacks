@@ -1,0 +1,9 @@
+en:
+  active_admin:
+    back: Volver
+    page_views:
+      admin_users: Administradores
+      users: Usuarios
+    form_title:
+      admin_user: Detalle Administrador
+      user: Detalle Usuario

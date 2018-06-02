@@ -1,0 +1,13 @@
+<%# Overwrite  %>
+<%# https://github.com/activeadmin/activeadmin/blob/846168a30c5eb17d44619c6b24a5857b2fb33f66/app/views/active_admin/devise/shared/_links.erb %>
+
+<%- if controller_name != 'sessions' %>
+  <% scope = Devise::Mapping.find_scope!(resource_name) %>
+  <%= link_to t('active_admin.devise.links.sign_in'), send(:"new_#{scope}_session_path") %>
+  <br>
+<% end -%>
+
+<%- if devise_mapping.recoverable? && controller_name != 'passwords' %>
+  <%= link_to t('active_admin.devise.links.forgot_your_password'), new_password_path(resource_name) %>
+  <br>
+<% end -%>

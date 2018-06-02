@@ -1,0 +1,26 @@
+Timestamp:
+   type: datetime
+   example: '"2017-08-31T19:48:00.099Z"'
+ExampleCreating:
+   type: object
+   properties:
+      title: string
+      description?: string
+      timestamp: Timestamp
+      status:
+         enum: [ active, inactive ]
+Example:
+   type: ExampleCreating
+   properties:
+      id:
+         type: integer
+         minimum: 1
+         required: true
+	example: |
+		{
+         "id": 1234,
+			"title": "Some Example",
+			"description": "Some Description",
+			"timestamp": "2017-08-31T19:48:00.099Z",
+			"status": "active"
+		}
