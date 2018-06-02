@@ -1,0 +1,17 @@
+urls:
+  base: http://18.204.205.78
+
+admin:
+  emails: admin@example.com, info@example.com
+
+facebook:
+  app:
+    id: 151002572319329
+    secrets: 228725df756d2ab263bd50c72150abb5
+  graph_api_url: https://graph.facebook.com/v2.11/me
+
+  # Only for test environment
+  auth_code: EAAB08cuP0BABAEOYkJjo2O97RUHjelLJSRgNP2kq3KZAQGjzHl7eyGimNNaPr3zTm3g8P8TbhHSRBUZCze1Ax6ZBrAkoEZCuVD1UTuT0ymFolbqIiZBi4nlsovBLf49NH1TgA3uauEK0JjZAa2qvdCRP6ZBjtcZAvmXbnSOJ6XrHrpF05hwoAHdrZBkQF92ih9UEZD
+
+sidekiq_redis_server_url: redis://redis:6379 # with docker
+# sidekiq_redis_server_url: redis://localhost:6379 # without docker
