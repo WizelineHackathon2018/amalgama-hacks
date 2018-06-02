@@ -1,10 +1,10 @@
-role :app, %w{deploy@18.204.205.78}
-role :web, %w{deploy@18.204.205.78}
-role :db,  %w{deploy@18.204.205.78}
+role :app, %w{deploy@wizeline.amalgama.co}
+role :web, %w{deploy@wizeline.amalgama.co}
+role :db,  %w{deploy@wizeline.amalgama.co}
 
 set :deploy_to, '/srv/rails/wizeline'
 
-server '18.204.205.78', user: 'deploy', roles: %w{web app}
+server 'wizeline.amalgama.co', user: 'deploy', roles: %w{web app}
 
 set :rails_env, 'production'
 set :branch, 'master'
