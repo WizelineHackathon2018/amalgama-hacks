@@ -14,6 +14,8 @@ Rails.application.routes.draw do
 	)
 	ActiveAdmin.routes(self)
 
+	root 'home#index'
+
 	scope module: 'api' do
 		scope '1', module: 'v1' do
 			resources :users do
