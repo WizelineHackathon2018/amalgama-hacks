@@ -16,6 +16,9 @@ Rails.application.routes.draw do
 
 	root 'home#index'
 
+	get 'results' => 'home#results'
+	post 'results' => 'home#results'
+
 	scope module: 'api' do
 		scope '1', module: 'v1' do
 			resources :users do

@@ -1,7 +1,7 @@
 ActiveAdmin.register Postulant do
 	menu priority: 5
 
-	permit_params :name
+	permit_params :name, :avatar
 
 	config.per_page = 25
 
@@ -24,6 +24,7 @@ ActiveAdmin.register Postulant do
 		f.inputs do
 			f.semantic_errors *f.object.errors.keys
 			f.input :name
+			f.input :avatar, as: :file, hint: image_tag( f.object.avatar.url :thumb )
 		end
 		f.actions
 	end
@@ -31,6 +32,9 @@ ActiveAdmin.register Postulant do
 	show do |postulant|
 		attributes_table do
 			row :name
+			row :avatar do
+				image_tag( brand.avatar.url :medium ) if brand.avatar.present?
+			end
 		end
 	end
 

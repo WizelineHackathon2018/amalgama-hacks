@@ -2,77 +2,78 @@
 
   <h1>Be part of the A team</h1>
 
-  <div class="slider">
+  <%= form_tag(results_path) do %>
 
-    <div class="inputs-container slide">
+      <div class="slider">
 
-      <div class="input-block">
-        <label>Company</label>
-        <input name="company" placeholder="ex. Marvel">
-      </div>
+        <div class="inputs-container slide">
 
-
-      <div class="input-block">
-        <label>Project Name</label>
-        <input name="project-name" placeholder="ex. LA, California (GMT-7)">
-      </div>
-
-      <div class="controls-container">
-        <div class="prev-question question-buttons"><< Prev</div>
-        <div class="next-question question-buttons">Next</div>
-      </div>
-
-    </div>
+          <div class="input-block">
+            <label>Company</label>
+            <input name="company" placeholder="ex. Marvel">
+          </div>
 
 
-    <div class="inputs-container slide">
+          <div class="input-block">
+            <label>Project Name</label>
+            <input name="project-name" placeholder="ex. LA, California (GMT-7)">
+          </div>
 
-      <div class="input-block">
-        <label>Time Zone Preferences</label>
-        <input name="time-zone" placeholder="ex. + -2">
-      </div>
+          <div class="controls-container">
+            <div class="next-question question-buttons">Next</div>
+          </div>
+
+        </div>
 
 
-      <div class="input-block">
-        <label>Languaje</label>
+        <div class="inputs-container slide">
 
-        <div class="options-container gender-options">
-          <input type="radio" id="male" name="gender" value="male" checked/>
-          <input type="radio" id="female" name="gender" value="female"/>
-          <input type="radio" id="male" name="gender" value="male"/>
-          <input type="radio" id="female" name="gender" value="female"/>
+          <div class="input-block">
+            <label>Time Zone Preferences</label>
+            <input name="time-zone" placeholder="ex. + -2">
+          </div>
+
+
+          <div class="input-block">
+            <label>Languaje</label>
+
+            <div class="options-container gender-options">
+              <input type="radio" id="male" name="gender" value="male" checked/>
+              <input type="radio" id="female" name="gender" value="female"/>
+              <input type="radio" id="male" name="gender" value="male"/>
+              <input type="radio" id="female" name="gender" value="female"/>
+            </div>
+
+          </div>
+
+          <div class="controls-container">
+            <div class="prev-question question-buttons"><< Prev</div>
+            <div class="next-question question-buttons">Next</div>
+          </div>
+
+        </div>
+
+        <div class="inputs-container slide">
+
+          <div class="input-block">
+            <label>Kick Off</label>
+            <input name="kick-off" type="date" placeholder="ex. 01/07/2019">
+          </div>
+
+
+          <div class="input-block">
+            <label>Due Date</label>
+            <input name="due-date" type="date" placeholder="ex. 09/12/2019">
+          </div>
+
+          <div class="controls-container">
+            <div class="prev-question question-buttons"><< Prev</div>
+            <input type="submit" class="next-question question-buttons" value="Create Team">
+          </div>
+
         </div>
 
       </div>
 
-      <div class="controls-container">
-        <div class="prev-question question-buttons"><< Prev</div>
-        <div class="next-question question-buttons">Next</div>
-      </div>
-
-    </div>
-
-    <div class="inputs-container slide">
-
-      <div class="input-block">
-        <label>Kick Off</label>
-        <input name="kick-off" type="date" placeholder="ex. 09/12/2017">
-      </div>
-
-
-      <div class="input-block">
-        <label>Industry</label>
-        <input name="kick-off" type="date" placeholder="ex. Entreteinment">
-      </div>
-
-      <div class="controls-container">
-        <div class="prev-question question-buttons"><< Prev</div>
-        <div class="next-question question-buttons">Create Team</div>
-      </div>
-
-    </div>
-
-  </div>
-
-
+  <% end %>
 </div>

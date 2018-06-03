@@ -166,32 +166,29 @@ h6 {
 
   }
 
-
   div a.bx-prev,
-  div a.bx-next{
+  div a.bx-next {
     display: none;
   }
   div.bx-wrapper {
     box-shadow: none;
   }
 
-
-
-  .controls-container{
+  .controls-container {
     display: inline-block;
     text-align: center;
     margin: 30px 0px 0px;
     width: 100%;
   }
 
-  .question-buttons{
+  .question-buttons {
     cursor: pointer;
     display: inline-block;
 
-    &.prev-question{
+    &.prev-question {
     }
 
-    &.next-question{
+    &.next-question {
       background-color: #00E5C0;
       color: white;
       text-align: center;
@@ -205,6 +202,65 @@ h6 {
       -moz-border-radius: 3px;
       border-radius: 3px;
       visibility: initial;
+    }
+  }
+
+  .team-container {
+    display: inline-block;
+    text-align: center;
+    margin: 80px auto;
+
+    .team-block {
+      display: inline-block;
+      text-align: center;
+      width: 19%;
+
+      .team-name,
+      .team-role,
+      .team-skills {
+        width: 100%;
+        font-weight: bold;
+        display: inline-block;
+        text-align: center;
+      }
+
+      .team-role {
+        font-weight: normal;
+        font-size: 0.8em;
+      }
+
+      .team-skills {
+        font-size: 0.7em;
+        font-weight: bold;
+      }
+
+    }
+  }
+
+  .confirm-container{
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    margin: 40px 0px;
+
+    a{
+      background-color: #00E5C0;
+      color: white;
+      text-align: center;
+      margin: 10px 3%;
+      font-weight: bold;
+      width: 200px;
+      height: auto;
+      line-height: 3;
+      display: inline-block;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      border-radius: 3px;
+      visibility: initial;
+
+      &.redo{
+        background: #9B9B9B;
+      }
     }
   }
 

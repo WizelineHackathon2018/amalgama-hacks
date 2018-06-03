@@ -1,0 +1,26 @@
+<div class="grid">
+
+  <h1>A team results</h1>
+
+  <div class="team-container">
+    <% if @postulants %>
+        <% @postulants.each do |postulant| %>
+            <div class="team-block">
+              <%= image_tag postulant.avatar.url(:thumb) %>
+              <div class="team-name"><%= postulant.name %></div>
+              <div class="team-role"><%= postulant.name %></div>
+              <div class="team-skills">Commitment: <%= "#{rand(1..5)};#{rand(1..5)};#{rand(1..5)}" %></div>
+            </div>
+        <% end %>
+    <% end %>
+  </div>
+
+
+  <h3>Confirm team</h3>
+  <div class="confirm-container">
+    <a href="">yes</a>
+    <a href="" class="redo">redo</a>
+  </div>
+
+
+</div>

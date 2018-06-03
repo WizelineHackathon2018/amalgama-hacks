@@ -17,6 +17,7 @@
 
 var $nextQuestion;
 var $prevQuestion;
+var $createTeamBtn;
 
 $(document).ready(function () {
 
@@ -29,22 +30,31 @@ $(document).ready(function () {
 	 setupVars();
 	 setupPrevButton();
 	 setupNextButton();
+
+	 setupCreateBtn();
 });
 
 
 function setupVars() {
 	 $prevQuestion = $('.prev-question');
 	 $nextQuestion = $('.next-question');
+	 $createTeamBtn = $('#create-team');
 }
 
-function setupPrevButton(){
-	 $prevQuestion.click(function(){
-		$('.bx-prev').click();
+function setupPrevButton() {
+	 $prevQuestion.click(function () {
+		  $('.bx-prev').click();
 	 })
 }
 
-function setupNextButton(){
-	 $nextQuestion.click(function(){
+function setupNextButton() {
+	 $nextQuestion.click(function () {
+		  $('.bx-next').click();
+	 })
+}
+
+function setupCreateBtn() {
+	 $createTeamBtn.click(function () {
 		  $('.bx-next').click();
 	 })
 }
