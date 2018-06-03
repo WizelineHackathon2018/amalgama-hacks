@@ -22,8 +22,6 @@ gem 'turbolinks', '~> 5'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
-gem "sentry-raven" # URL: https://docs.sentry.io/clients/ruby/install/
-
 # gem 'capybara', '~> 2.13', group: :development
 # gem 'selenium-webdriver', group: :development
 

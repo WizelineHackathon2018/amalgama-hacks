@@ -1,5 +1,5 @@
 urls:
-  base: http://18.204.205.78
+  base: http://wizeline.amalgama.co
 
 admin:
   emails: admin@example.com, info@example.com

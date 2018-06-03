@@ -1,6 +1,5 @@
 ActiveAdmin.register User, as: 'Admins' do
-	menu priority: 1, label: I18n.t('active_admin.page_views.admin_users'),
-		if: proc { current_user.has_role? :admin }
+	menu priority: 10, if: proc { current_user.has_role? :admin }
 
 	permit_params :email, :password, :password_confirmation
 
