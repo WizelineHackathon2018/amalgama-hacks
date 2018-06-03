@@ -31,6 +31,11 @@ Rails.application.routes.draw do
 				get 'change_password' => 'passwords#edit'
 				put 'update_user_password' => 'passwords#update'
 			end
+
+			scope :postulant do
+				get 'team_match' => 'postulants#team_match'
+			end
+
 		end
 	end
 end

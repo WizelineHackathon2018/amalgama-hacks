@@ -163,6 +163,42 @@ h6 {
     }
 
   }
+
+
+  div a.bx-prev,
+  div a.bx-next{
+    display: none;
+  }
+  div.bx-wrapper {
+    box-shadow: none;
+  }
+
+
+  .question-buttons{
+    cursor: pointer;
+    display: inline-block;
+
+    &.prev-question{
+    }
+
+    &.next-question{
+      background-color: #00E5C0;
+      color: white;
+      text-align: center;
+      margin: 10px 3%;
+      font-weight: bold;
+      width: 200px;
+      height: auto;
+      line-height: 3;
+
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      border-radius: 3px;
+      visibility: initial;
+    }
+  }
+
 }
+
 
 

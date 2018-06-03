@@ -13,3 +13,52 @@
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
+
+
+var $nextQuestion;
+var $prevQuestion;
+
+$(document).ready(function () {
+
+	 $('.slider').bxSlider({
+		  pager: false,
+		  touchEnabled: false
+	 });
+
+	 setupVars();
+	 setupPrevButton();
+	 setupNextButton();
+});
+
+
+function setupVars() {
+	 $prevQuestion = $('.prev-question');
+	 $nextQuestion = $('.next-question');
+}
+
+function setupPrevButton(){
+	 $prevQuestion.click(function(){
+		$('.bx-prev').click();
+	 })
+}
+
+function setupNextButton(){
+	 $nextQuestion.click(function(){
+		  $('.bx-next').click();
+	 })
+}
+
+function requestToWs(method, url, quantity, callback) {
+
+	 $.ajax({
+		  url: url,
+		  context: document.body,
+		  type: method,
+		  data: {
+				quantity: quantity
+		  }
+	 }).done(function (data) {
+		  if (data.response == 'success')
+				callback;
+	 });
+}
