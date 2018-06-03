@@ -22,7 +22,8 @@ $(document).ready(function () {
 
 	 $('.slider').bxSlider({
 		  pager: false,
-		  touchEnabled: false
+		  touchEnabled: false,
+		  infiniteLoop: false
 	 });
 
 	 setupVars();
