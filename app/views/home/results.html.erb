@@ -9,7 +9,9 @@
               <%= image_tag postulant.avatar.url(:thumb) %>
               <div class="team-name"><%= postulant.name %></div>
               <div class="team-role"><%= @positions[i] %></div>
-              <div class="team-skills">Commitment: <%= "#{rand(1..5)};#{rand(1..5)};#{rand(1..5)}" %></div>
+              <div class="team-skills">Commitment: <%= rand(1..5) %></div>
+              <div class="team-skills">Social: <%= rand(1..5) %></div>
+              <div class="team-skills">Productivity: <%= rand(1..5) %></div>
             </div>
         <% end %>
     <% end %>
@@ -19,7 +21,7 @@
   <h3>Confirm team</h3>
   <div class="confirm-container">
     <a href="">yes</a>
-    <a href="" class="redo">redo</a>
+    <a href="<%= root_path %>" class="redo">redo</a>
   </div>
 
 
