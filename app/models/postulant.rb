@@ -11,4 +11,8 @@ class Postulant < ApplicationRecord
 	enum english: { no: 0, yes: 1 }
 	enum gender: { female: 0, male: 1 }
 
+	enum platform: { backend: 0, frontend: 1 }
+	enum languaje: { ruby: 0, python: 1, java: 3, swift: 4 }
+	enum seniority: { junior: 0, semi_senior: 1, senior: 3 }
+
 end
