@@ -149,15 +149,27 @@ h6 {
 
       &.gender-options {
 
-        input#male {
+        input#java{
           &::before {
-            content: "Dobladito";
+            content: "Java";
           }
         }
 
-        input#female {
+        input#ruby{
           &::before {
-            content: "Bollito";
+            content: "Ruby";
+          }
+        }
+
+        input#ruby{
+          &::before {
+            content: "Python";
+          }
+        }
+
+        input#swift{
+          &::before {
+            content: "Swift";
           }
         }
 
@@ -215,7 +227,7 @@ h6 {
       text-align: center;
       width: 19%;
 
-      img{
+      img {
         border-radius: 50%;
         margin: 0px 0px 20px;
       }
@@ -243,13 +255,13 @@ h6 {
     }
   }
 
-  .confirm-container{
+  .confirm-container {
     text-align: center;
     display: inline-block;
     width: 100%;
     margin: 40px 0px;
 
-    a{
+    a {
       background-color: #00E5C0;
       color: white;
       text-align: center;
@@ -264,9 +276,22 @@ h6 {
       border-radius: 3px;
       visibility: initial;
 
-      &.redo{
+      &.redo {
         background: #9B9B9B;
       }
+    }
+  }
+
+  .app-logo {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+
+    img {
+      display: inline-block;
+      width: 20%;
+      margin: 40px auto 0px;
+      min-width: 150px;
     }
   }
 

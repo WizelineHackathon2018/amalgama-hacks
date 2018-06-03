@@ -1,5 +1,9 @@
 <div class="grid">
 
+  <div class="app-logo">
+    <img src="<%= image_path 'app-logo.png' %>">
+  </div>
+
   <h1>A team results</h1>
 
   <div class="team-container">
@@ -12,6 +16,7 @@
               <div class="team-skills">Commitment: <%= rand(1..5) %></div>
               <div class="team-skills">Social: <%= rand(1..5) %></div>
               <div class="team-skills">Productivity: <%= rand(1..5) %></div>
+              <div class="team-skills">Personality: <%= @personality[i] %></div>
             </div>
         <% end %>
     <% end %>
@@ -20,7 +25,7 @@
 
   <h3>Confirm team</h3>
   <div class="confirm-container">
-    <a href="">yes</a>
+    <a href="<%= root_path %>">yes</a>
     <a href="<%= root_path %>" class="redo">redo</a>
   </div>
 

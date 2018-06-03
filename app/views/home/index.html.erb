@@ -1,5 +1,9 @@
 <div class="grid">
 
+  <div class="app-logo">
+    <img src="<%= image_path 'app-logo.png' %>">
+  </div>
+
   <h1>Build your dream Team</h1>
 
   <%= form_tag(results_path) do %>
@@ -38,10 +42,10 @@
             <label>Languaje</label>
 
             <div class="options-container gender-options">
-              <input type="radio" id="male" name="gender" value="male" checked/>
-              <input type="radio" id="female" name="gender" value="female"/>
-              <input type="radio" id="male" name="gender" value="male"/>
-              <input type="radio" id="female" name="gender" value="female"/>
+              <input type="radio" id="java" name="gender" value="Java" checked/>
+              <input type="radio" id="ruby" name="gender" value="Ruby"/>
+              <input type="radio" id="python" name="gender" value="Python"/>
+              <input type="radio" id="switf" name="gender" value="Swift"/>
             </div>
 
           </div>

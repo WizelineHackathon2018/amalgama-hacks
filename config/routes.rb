@@ -16,7 +16,6 @@ Rails.application.routes.draw do
 
 	root 'home#index'
 
-	get 'results' => 'home#results'
 	post 'results' => 'home#results'
 
 	scope module: 'api' do
