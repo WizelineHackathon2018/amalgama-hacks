@@ -33,7 +33,7 @@ ActiveAdmin.register Postulant do
 		attributes_table do
 			row :name
 			row :avatar do
-				image_tag( brand.avatar.url :medium ) if brand.avatar.present?
+				image_tag( postulant.avatar.url :medium ) if postulant.avatar.present?
 			end
 		end
 	end

@@ -4,11 +4,11 @@
 
   <div class="team-container">
     <% if @postulants %>
-        <% @postulants.each do |postulant| %>
+        <% @postulants.each_with_index do |postulant, i| %>
             <div class="team-block">
               <%= image_tag postulant.avatar.url(:thumb) %>
               <div class="team-name"><%= postulant.name %></div>
-              <div class="team-role"><%= postulant.name %></div>
+              <div class="team-role"><%= @positions[i] %></div>
               <div class="team-skills">Commitment: <%= "#{rand(1..5)};#{rand(1..5)};#{rand(1..5)}" %></div>
             </div>
         <% end %>

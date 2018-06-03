@@ -215,6 +215,11 @@ h6 {
       text-align: center;
       width: 19%;
 
+      img{
+        border-radius: 50%;
+        margin: 0px 0px 20px;
+      }
+
       .team-name,
       .team-role,
       .team-skills {
@@ -226,7 +231,8 @@ h6 {
 
       .team-role {
         font-weight: normal;
-        font-size: 0.8em;
+        font-size: 0.9em;
+        margin: 9px 0px 5px;
       }
 
       .team-skills {
