@@ -1,14 +1,40 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>App</title>
+    <title>A Team</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+    <meta name="description" content="Amalgama - Wizeline Hackathon 2018"/>
+    <meta name="canonical" content="http://wizeline.amalgama.co"/>
+    <meta name="robots" content="INDEX, FOLLOW"/>
+    <meta name="author" content="amalgama.co"/>
+    <meta name="viewport" content="width=1100, user-scalable=yes"/>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Language" content="ES"/>
+    <link rel="alternate" hreflang="es" href="http://wizeline.amalgama.co" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=10">
+
+    <link rel="shortcut icon" href="<%= image_path('favicon.png') %>">
+    <link rel="icon" href="<%= image_path('favicon.png') %>" type="image/x-icon">
+
   </head>
 
   <body>
     <%= yield %>
   </body>
 </html>
+
+
+
+
+
+
+
+
+

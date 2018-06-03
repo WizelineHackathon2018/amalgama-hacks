@@ -21,6 +21,7 @@ module App
 		config.autoload_paths << Rails.root.join( 'app', 'services' )
 		config.autoload_paths << Rails.root.join( 'app', 'errors' )
 		config.autoload_paths << Rails.root.join( 'app', 'validators' )
+		config.autoload_paths << Rails.root.join( 'app', 'assets' )
 		config.autoload_paths << Rails.root.join( 'app', 'services', 'facebook_api_log_in' )
 		config.autoload_paths << Rails.root.join( 'lib' )
 	end
