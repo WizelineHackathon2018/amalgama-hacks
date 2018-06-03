@@ -9,9 +9,14 @@ namespace :app do
 
 	task :create_postulants => :environment do
 		25.times do
-			name = names[rand(0..names.size)]
-			last_name = last_names[rand(0..last_names.size)]
-			Postulant.create!(name: "#{name} #{last_name}")
+			name = names[rand(0..names.size) - 1]
+			last_name = last_names[rand(0..last_names.size) - 1]
+			Postulant.create!(
+				name: "#{name} #{last_name}",
+				availability: rand(0..1),
+				english: rand(0..1),
+				gender: rand(0..1),
+			)
 		end
 	end
 

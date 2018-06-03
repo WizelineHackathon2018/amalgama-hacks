@@ -14,6 +14,9 @@ ActiveAdmin.register Postulant do
 		selectable_column
 		id_column
 		column :name
+		column :availability
+		column :english
+		column :gender
 		actions
 	end
 
